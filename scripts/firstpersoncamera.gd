@@ -5,13 +5,8 @@ var pitch = 0.0
 var yaw = 0.0
 var sensitivity = 0.3
 
-var camera
-
-func _ready():
-	camera = get_node("camera")
-
 func set_active(active):
-	if (active):
+	if active:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	else:
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
@@ -21,10 +16,10 @@ func set_active(active):
 	set_process_input(active)
 
 func _input(ie):
-	if (Input.get_mouse_mode() != Input.MOUSE_MODE_CAPTURED):
+	if Input.get_mouse_mode() != Input.MOUSE_MODE_CAPTURED:
 		return
 
-	if (ie.type == InputEvent.MOUSE_MOTION):
+	if ie.type == InputEvent.MOUSE_MOTION:
 		pitch = clamp(pitch - (ie.relative_y * sensitivity), -89.0, 89.0)
 		yaw = fmod(yaw - (ie.relative_x * sensitivity), 360.0)
 

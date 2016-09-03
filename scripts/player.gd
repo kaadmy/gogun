@@ -46,6 +46,9 @@ func _init():
 	player_name = ""
 
 func _ready():
+	if !is_network_master():
+		get_node("head/camera").queue_free()
+
 	head.set_active(true)
 
 	player_shadow.get_node("armature/player").set_cast_shadows_setting(GeometryInstance.SHADOW_CASTING_SETTING_OFF)

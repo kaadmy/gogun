@@ -38,10 +38,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 20.0
-margin/right = 0.0
-margin/bottom = 0.0
+margin/left = 4.0
+margin/top = 32.0
+margin/right = 4.0
+margin/bottom = 4.0
 
 [node name="label_effects" type="Label" parent="tabs/Options"]
 
