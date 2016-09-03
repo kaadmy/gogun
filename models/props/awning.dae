@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>Kaadmy</author>
+      <authoring_tool>Blender 2.69.0 r60991</authoring_tool>
+    </contributor>
+    <created>2016-09-01T16:22:36</created>
+    <modified>2016-09-01T16:22:36</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_images/>
+  <library_effects>
+    <effect id="iron-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <phong>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.1532956 0.09630095 0.08896419 1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.5 0.5 0.5 1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">50</float>
+            </shininess>
+            <index_of_refraction>
+              <float sid="index_of_refraction">1</float>
+            </index_of_refraction>
+          </phong>
+        </technique>
+        <extra>
+          <technique profile="GOOGLEEARTH">
+            <double_sided>1</double_sided>
+          </technique>
+        </extra>
+      </profile_COMMON>
+      <extra><technique profile="MAX3D"><double_sided>1</double_sided></technique></extra>
+    </effect>
+    <effect id="cloth-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <phong>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.2994934 0.4607591 0.1382277 1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.5 0.5 0.5 1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">50</float>
+            </shininess>
+            <index_of_refraction>
+              <float sid="index_of_refraction">1</float>
+            </index_of_refraction>
+          </phong>
+        </technique>
+        <extra>
+          <technique profile="GOOGLEEARTH">
+            <double_sided>1</double_sided>
+          </technique>
+        </extra>
+      </profile_COMMON>
+      <extra><technique profile="MAX3D"><double_sided>1</double_sided></technique></extra>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="iron-material" name="iron">
+      <instance_effect url="#iron-effect"/>
+    </material>
+    <material id="cloth-material" name="cloth">
+      <instance_effect url="#cloth-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="mesh-mesh" name="mesh">
+      <mesh>
+        <source id="mesh-mesh-positions">
+          <float_array id="mesh-mesh-positions-array" count="156">-1.4 -4 0.1999999 -5 -4 2 -2.8 -4 0.5999999 -4.1 -4 1.3 2.38419e-7 -4 0 -1.4 -4 0.0999999 -5 -4 1.9 -2.8 -4 0.4999999 -4.1 -4 1.2 2.38419e-7 -4 -0.1000001 -1.4 4 0.1999999 -5 4 2 -2.8 4 0.5999999 -4.1 4 1.3 2.38419e-7 4 0 -1.4 4 0.0999999 -5 4 1.9 -2.8 4 0.4999999 -4.1 4 1.2 2.38419e-7 4 -0.1000001 -5 -3.55 -0.1 -5 -3.45 -0.1 0 -3.45 -0.1 0 -3.55 -0.1 -5 -3.55 0.1 -5 -3.45 0.1 -1.3 -3.45 0.1 -1.3 -3.55 0.1 -5 3.45 -0.1 -5 3.55 -0.1 0 3.55 -0.1 0 3.45 -0.1 -5 3.45 0.1 -5 3.55 0.1 -1.3 3.55 0.1 -1.3 3.45 0.1 -5 1.45 -0.1 -5 1.55 -0.1 0 1.55 -0.1 0 1.45 -0.1 -5 1.45 0.1 -5 1.55 0.1 -1.3 1.55 0.1 -1.3 1.45 0.1 -5 -1.55 -0.1 -5 -1.45 -0.1 0 -1.45 -0.1 0 -1.55 -0.1 -5 -1.55 0.1 -5 -1.45 0.1 -1.3 -1.45 0.1 -1.3 -1.55 0.1</float_array>
+          <technique_common>
+            <accessor source="#mesh-mesh-positions-array" count="52" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="mesh-mesh-normals">
+          <float_array id="mesh-mesh-normals-array" count="198">0 1 0 0 1 0 0 1 0 0 1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 -1 0 0 0.1414213 0 0.9899495 -0.2747211 0 -0.961524 0.2747211 0 0.961524 -0.4740998 0 -0.8804711 0.4740998 0 0.8804711 -0.6139406 0 -0.7893522 0.6139406 0 0.7893522 -0.1414213 0 -0.9899495 0 1 0 0 -1 0 0 0 -1 0 0 1 0 1 0 0 -1 0 0 0 -1 0 0 1 0 1 0 0 -1 0 0 0 -1 0 0 1 0 1 0 0 -1 0 0 0 -1 0 0 1 0 1 0 0 1 0 0 1 0 0 1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 -1 0 0 0.1414213 0 0.9899495 -0.2747211 0 -0.961524 0.2747211 0 0.961524 -0.4740998 0 -0.8804711 0.4740998 0 0.8804711 -0.6139406 0 -0.7893522 0.6139406 0 0.7893522 -0.1414213 0 -0.9899495 0 1 0 0 -1 0 0 0 -1 0 0 1 0 1 0 0 -1 0 0 0 -1 0 0 1 0 1 0 0 -1 0 0 0 -1 0 0 1 0 1 0 0 -1 0 0 0 -1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#mesh-mesh-normals-array" count="66" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="mesh-mesh-vertices">
+          <input semantic="POSITION" source="#mesh-mesh-positions"/>
+        </vertices>
+        <polylist material="iron-material" count="32">
+          <input semantic="VERTEX" source="#mesh-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#mesh-mesh-normals" offset="1"/>
+          <vcount>3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 </vcount>
+          <p>25 17 26 17 21 17 27 18 24 18 20 18 20 19 21 19 23 19 27 20 26 20 24 20 33 21 34 21 29 21 35 22 32 22 28 22 28 23 29 23 31 23 35 24 34 24 32 24 41 25 42 25 37 25 43 26 40 26 36 26 36 27 37 27 39 27 43 28 42 28 40 28 49 29 50 29 45 29 51 30 48 30 44 30 44 31 45 31 47 31 51 32 50 32 48 32 26 50 22 50 21 50 23 51 27 51 20 51 21 52 22 52 23 52 26 53 25 53 24 53 34 54 30 54 29 54 31 55 35 55 28 55 29 56 30 56 31 56 34 57 33 57 32 57 42 58 38 58 37 58 39 59 43 59 36 59 37 60 38 60 39 60 42 61 41 61 40 61 50 62 46 62 45 62 47 63 51 63 44 63 45 64 46 64 47 64 50 65 49 65 48 65</p>
+        </polylist>
+        <polylist material="cloth-material" count="34">
+          <input semantic="VERTEX" source="#mesh-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#mesh-mesh-normals" offset="1"/>
+          <vcount>3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 </vcount>
+          <p>0 0 5 0 2 0 2 1 7 1 3 1 3 2 8 2 1 2 4 3 9 3 0 3 10 4 12 4 15 4 12 5 13 5 17 5 13 6 11 6 18 6 14 7 10 7 19 7 9 8 4 8 19 8 5 9 9 9 15 9 0 10 2 10 10 10 7 11 5 11 17 11 2 12 3 12 12 12 8 13 7 13 18 13 3 14 1 14 13 14 6 15 8 15 16 15 4 16 0 16 14 16 5 33 7 33 2 33 7 34 8 34 3 34 8 35 6 35 1 35 9 36 5 36 0 36 12 37 17 37 15 37 13 38 18 38 17 38 11 39 16 39 18 39 10 40 15 40 19 40 4 41 14 41 19 41 9 42 19 42 15 42 2 43 12 43 10 43 5 44 15 44 17 44 3 45 13 45 12 45 7 46 17 46 18 46 1 47 11 47 13 47 8 48 18 48 16 48 0 49 10 49 14 49</p>
+        </polylist>
+      </mesh>
+      <extra><technique profile="MAYA"><double_sided>1</double_sided></technique></extra>
+    </geometry>
+  </library_geometries>
+  <library_controllers/>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="mesh" name="mesh" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#mesh-mesh">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="iron-material" target="#iron-material"/>
+              <instance_material symbol="cloth-material" target="#cloth-material"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>

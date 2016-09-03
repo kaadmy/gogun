@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>Kaadmy</author>
+      <authoring_tool>Blender 2.69.0 r60991</authoring_tool>
+    </contributor>
+    <created>2016-09-03T11:08:45</created>
+    <modified>2016-09-03T11:08:45</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_images/>
+  <library_effects>
+    <effect id="bark-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <phong>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.2064012 0.1321952 0.06004867 1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.5 0.5 0.5 1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">50</float>
+            </shininess>
+            <index_of_refraction>
+              <float sid="index_of_refraction">1</float>
+            </index_of_refraction>
+          </phong>
+        </technique>
+        <extra>
+          <technique profile="GOOGLEEARTH">
+            <double_sided>1</double_sided>
+          </technique>
+        </extra>
+      </profile_COMMON>
+      <extra><technique profile="MAX3D"><double_sided>1</double_sided></technique></extra>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="bark-material" name="bark">
+      <instance_effect url="#bark-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="mesh-mesh" name="mesh">
+      <mesh>
+        <source id="mesh-mesh-positions">
+          <float_array id="mesh-mesh-positions-array" count="72">2 0.1999999 -0.1464102 2 0.4 0.1999999 2 0.5 0.2 -2 0.25 -0.2330127 2 0.25 -0.2330127 2 -0.2500001 -0.2330126 -2 -0.5 0.1999999 2 -0.5 0.2000001 -2 -0.2499999 0.6330127 2 -0.2499999 0.6330128 2 0.25 0.6330128 2 -0.2 -0.1464101 2 -0.4 0.2000001 2 -0.1999999 0.5464102 2 0.1999999 0.5464102 -2 0.1999999 -0.1464102 -2 0.4 0.1999999 -2 -0.2 -0.1464101 -2 -0.4 0.2000001 -2 -0.1999999 0.5464102 -2 0.1999999 0.5464102 -2 0.5 0.1999999 -2 -0.2500001 -0.2330126 -2 0.25 0.6330127</float_array>
+          <technique_common>
+            <accessor source="#mesh-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="mesh-mesh-normals">
+          <float_array id="mesh-mesh-normals-array" count="144">0 -0.8660254 -0.5 0 0.8660254 -0.5000001 0 2.98023e-7 1 0 0 -1 0 0.8660255 0.4999998 0 -0.8660254 0.5 1 -4.76837e-7 2.75302e-7 1 -1.19209e-6 -4.12953e-7 0 -0.8660254 0.5000001 1 -2.38419e-7 -1.37651e-7 1 0 0 1 0 0 1 -1.90735e-6 1.65181e-6 -1 0 0 0 0.8660255 -0.4999998 0 -3.57628e-7 -1 0 -0.8660255 -0.4999999 0 0 1 0 0.8660254 0.5 -1 0 0 -1 0 0 -1 0 0 -1 2.38419e-6 -1.37651e-6 -1 0 0 0 -0.8660254 -0.5 0 0.8660254 -0.5000001 0 2.98023e-7 1 0 0 -1 0 0.8660255 0.4999998 0 -0.8660254 0.5 1 0 2.75302e-6 1 0 0 0 -0.8660253 0.5000001 1 -1.19209e-6 6.88255e-7 1 0 0 1 0 0 1 0 0 -1 0 0 0 0.8660254 -0.5 0 -2.38419e-7 -1 0 -0.8660255 -0.5 0 0 1 0 0.8660254 0.5 -1 0 0 -1 0 0 -1 0 0 -1 0 -5.50605e-7 -1 4.76837e-7 -2.47772e-6</float_array>
+          <technique_common>
+            <accessor source="#mesh-mesh-normals-array" count="48" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="mesh-mesh-vertices">
+          <input semantic="POSITION" source="#mesh-mesh-positions"/>
+        </vertices>
+        <polylist material="bark-material" count="48">
+          <input semantic="VERTEX" source="#mesh-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#mesh-mesh-normals" offset="1"/>
+          <vcount>3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 </vcount>
+          <p>1 0 14 0 16 0 13 1 12 1 19 1 11 2 0 2 17 2 14 3 13 3 20 3 12 4 11 4 18 4 0 5 1 5 15 5 5 6 4 6 11 6 7 7 5 7 12 7 6 8 7 8 8 8 9 9 7 9 13 9 10 10 9 10 14 10 2 11 10 11 1 11 4 12 2 12 0 12 16 13 20 13 21 13 21 14 2 14 3 14 3 15 4 15 22 15 22 16 5 16 6 16 8 17 9 17 23 17 23 18 10 18 21 18 15 19 16 19 3 19 17 20 15 20 22 20 18 21 17 21 6 21 19 22 18 22 8 22 20 23 19 23 23 23 14 24 20 24 16 24 12 25 18 25 19 25 0 26 15 26 17 26 13 27 19 27 20 27 11 28 17 28 18 28 1 29 16 29 15 29 4 30 0 30 11 30 5 31 11 31 12 31 7 32 9 32 8 32 7 33 12 33 13 33 9 34 13 34 14 34 10 35 14 35 1 35 2 36 1 36 0 36 20 37 23 37 21 37 2 38 4 38 3 38 4 39 5 39 22 39 5 40 7 40 6 40 9 41 10 41 23 41 10 42 2 42 21 42 16 43 21 43 3 43 15 44 3 44 22 44 17 45 22 45 6 45 18 46 6 46 8 46 19 47 8 47 23 47</p>
+        </polylist>
+      </mesh>
+      <extra><technique profile="MAYA"><double_sided>1</double_sided></technique></extra>
+    </geometry>
+  </library_geometries>
+  <library_controllers/>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="mesh" name="mesh" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#mesh-mesh">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="bark-material" target="#bark-material"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>

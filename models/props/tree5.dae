@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>Kaadmy</author>
+      <authoring_tool>Blender 2.69.0 r60991</authoring_tool>
+    </contributor>
+    <created>2016-09-01T17:30:23</created>
+    <modified>2016-09-01T17:30:23</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_images/>
+  <library_effects>
+    <effect id="leaves-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <phong>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.1197652 0.2901333 0.07864953 1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.5 0.5 0.5 1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">50</float>
+            </shininess>
+            <index_of_refraction>
+              <float sid="index_of_refraction">1</float>
+            </index_of_refraction>
+          </phong>
+        </technique>
+        <extra>
+          <technique profile="GOOGLEEARTH">
+            <double_sided>1</double_sided>
+          </technique>
+        </extra>
+      </profile_COMMON>
+      <extra><technique profile="MAX3D"><double_sided>1</double_sided></technique></extra>
+    </effect>
+    <effect id="bark-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <phong>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.1311664 0.09304358 0.06332031 1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.5 0.5 0.5 1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">50</float>
+            </shininess>
+            <index_of_refraction>
+              <float sid="index_of_refraction">1</float>
+            </index_of_refraction>
+          </phong>
+        </technique>
+        <extra>
+          <technique profile="GOOGLEEARTH">
+            <double_sided>1</double_sided>
+          </technique>
+        </extra>
+      </profile_COMMON>
+      <extra><technique profile="MAX3D"><double_sided>1</double_sided></technique></extra>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="leaves-material" name="leaves">
+      <instance_effect url="#leaves-effect"/>
+    </material>
+    <material id="bark-material" name="bark">
+      <instance_effect url="#bark-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="mesh-mesh" name="mesh">
+      <mesh>
+        <source id="mesh-mesh-positions">
+          <float_array id="mesh-mesh-positions-array" count="111">0 0.5 0 0 0.35 4 0.25 0.4330127 0 0.175 0.3031089 4 0.4330127 0.25 0 0.3031089 0.175 4 0.5 0 0 0.35 0 4 0.4330127 -0.25 0 0.3031089 -0.175 4 0.25 -0.4330127 0 0.175 -0.3031089 4 0 -0.5 0 0 -0.35 4 -0.2499999 -0.4330127 0 -0.1749999 -0.3031089 4 -0.4330126 -0.2500001 0 -0.3031088 -0.1750001 4 -0.5 -2.32456e-7 0 -0.35 -1.62719e-7 4 -0.4330129 0.2499997 0 -0.303109 0.1749998 4 -0.2500003 0.4330126 0 -0.1750002 0.3031088 4 -1.050001 1.818653 5 -1.818654 1.049999 5 -2.1 -7.3627e-7 5 -1.818653 -1.05 5 -1.049999 -1.818653 5 3.58098e-7 -2.1 5 1.05 -1.818653 5 1.818653 -1.05 5 2.1 1.48252e-7 5 1.818653 1.05 5 1.05 1.818653 5 0 2.1 5 0 0 11</float_array>
+          <technique_common>
+            <accessor source="#mesh-mesh-positions-array" count="37" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="mesh-mesh-normals">
+          <float_array id="mesh-mesh-normals-array" count="180">0.2586494 0.9652928 0.03619843 0.7066434 0.7066434 0.03619843 0.9652928 0.2586493 0.03619843 0.9652928 -0.2586494 0.03619843 0.7066434 -0.7066434 0.03619843 0.2586495 -0.9652928 0.03619843 -0.2586492 -0.9652928 0.03619843 -0.7066432 -0.7066436 0.03619843 -0.9652926 -0.2586498 0.03619843 -0.9652929 0.2586489 0.03619843 -0.7066438 0.7066429 0.03619843 -0.2586497 0.9652927 0.03619843 0.4918121 0.1317806 -0.8606711 -0.3600314 -0.3600316 -0.8606711 0.3600314 -0.3600314 -0.8606712 -0.4918121 0.1317803 -0.8606712 0.3600314 0.3600314 -0.8606711 -0.1317805 -0.4918122 -0.8606711 -0.1317808 0.4918119 -0.8606712 0.4918121 -0.1317806 -0.8606711 -0.491812 -0.1317809 -0.8606711 0.1317806 0.491812 -0.8606712 0.1317807 -0.4918121 -0.8606711 -0.3600316 0.3600311 -0.8606712 0.915048 0.2451863 0.3202668 -0.6698615 -0.6698618 0.3202667 0.915048 -0.2451864 0.3202668 -0.9150479 -0.2451868 0.3202668 0.6698617 -0.6698616 0.3202667 -0.9150481 0.2451858 0.3202668 0.2451866 0.915048 0.3202669 0.2451864 -0.915048 0.3202667 -0.6698622 0.6698611 0.3202669 0.6698617 0.6698616 0.3202668 -0.2451861 -0.9150481 0.3202667 -0.2451866 0.915048 0.3202669 0.2586495 0.9652928 0.03619843 0.7066434 0.7066434 0.03619843 0.9652928 0.2586494 0.03619843 0.9652928 -0.2586495 0.03619843 0.7066434 -0.7066434 0.03619843 0.2586495 -0.9652927 0.03619843 -0.2586492 -0.9652929 0.03619843 -0.7066432 -0.7066435 0.03619843 -0.9652926 -0.2586499 0.03619843 -0.9652929 0.2586489 0.03619843 -0.7066439 0.7066429 0.03619843 -0.2586497 0.9652927 0.03619843 0.4918121 0.1317806 -0.8606711 -0.3600314 -0.3600316 -0.8606711 0.3600315 -0.3600314 -0.8606711 -0.4918121 0.1317803 -0.8606711 0.3600314 0.3600314 -0.8606711 -0.1317805 -0.4918122 -0.8606711 -0.1317808 0.4918119 -0.8606712 0.4918121 -0.1317806 -0.8606711 -0.4918121 -0.1317809 -0.8606711 0.1317807 0.491812 -0.8606712 0.1317806 -0.4918121 -0.8606711 -0.3600317 0.3600311 -0.8606712</float_array>
+          <technique_common>
+            <accessor source="#mesh-mesh-normals-array" count="60" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="mesh-mesh-vertices">
+          <input semantic="POSITION" source="#mesh-mesh-positions"/>
+        </vertices>
+        <polylist material="leaves-material" count="36">
+          <input semantic="VERTEX" source="#mesh-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#mesh-mesh-normals" offset="1"/>
+          <vcount>3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 </vcount>
+          <p>7 12 5 12 32 12 17 13 15 13 27 13 11 14 9 14 30 14 21 15 19 15 25 15 5 16 3 16 33 16 15 17 13 17 28 17 1 18 23 18 35 18 9 19 7 19 31 19 19 20 17 20 26 20 3 21 1 21 34 21 13 22 11 22 29 22 23 23 21 23 24 23 32 24 33 24 36 24 27 25 28 25 36 25 31 26 32 26 36 26 26 27 27 27 36 27 30 28 31 28 36 28 25 29 26 29 36 29 34 30 35 30 36 30 29 31 30 31 36 31 24 32 25 32 36 32 33 33 34 33 36 33 28 34 29 34 36 34 35 35 24 35 36 35 5 48 33 48 32 48 15 49 28 49 27 49 9 50 31 50 30 50 19 51 26 51 25 51 3 52 34 52 33 52 13 53 29 53 28 53 23 54 24 54 35 54 7 55 32 55 31 55 17 56 27 56 26 56 1 57 35 57 34 57 11 58 30 58 29 58 21 59 25 59 24 59</p>
+        </polylist>
+        <polylist material="bark-material" count="24">
+          <input semantic="VERTEX" source="#mesh-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#mesh-mesh-normals" offset="1"/>
+          <vcount>3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 </vcount>
+          <p>0 0 1 0 2 0 2 1 3 1 4 1 4 2 5 2 6 2 6 3 7 3 8 3 8 4 9 4 10 4 10 5 11 5 12 5 12 6 13 6 14 6 14 7 15 7 16 7 16 8 17 8 18 8 18 9 19 9 20 9 20 10 21 10 22 10 22 11 23 11 0 11 1 36 3 36 2 36 3 37 5 37 4 37 5 38 7 38 6 38 7 39 9 39 8 39 9 40 11 40 10 40 11 41 13 41 12 41 13 42 15 42 14 42 15 43 17 43 16 43 17 44 19 44 18 44 19 45 21 45 20 45 21 46 23 46 22 46 23 47 1 47 0 47</p>
+        </polylist>
+      </mesh>
+      <extra><technique profile="MAYA"><double_sided>1</double_sided></technique></extra>
+    </geometry>
+  </library_geometries>
+  <library_controllers/>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="mesh" name="mesh" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#mesh-mesh">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="leaves-material" target="#leaves-material"/>
+              <instance_material symbol="bark-material" target="#bark-material"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>

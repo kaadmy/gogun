@@ -1,0 +1,525 @@
+[gd_scene load_steps=5 format=1]
+
+[ext_resource path="res://scripts/mainmenu.gd" type="Script" id=1]
+[ext_resource path="res://scripts/maplist.gd" type="Script" id=2]
+[ext_resource path="res://icon.png" type="Texture" id=3]
+[ext_resource path="res://scripts/credits.gd" type="Script" id=4]
+
+[node name="root_ui" type="Control"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 40.0
+script/script = ExtResource( 1 )
+
+[node name="tabs" type="TabContainer" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 40.0
+margin/top = 40.0
+margin/right = 980.0
+margin/bottom = 560.0
+tab_align = 0
+tabs_visible = true
+
+[node name="Options" type="Tabs" parent="tabs"]
+
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 20.0
+margin/right = 0.0
+margin/bottom = 0.0
+
+[node name="label_effects" type="Label" parent="tabs/Options"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 20.0
+margin/top = 20.0
+margin/right = 220.0
+margin/bottom = 40.0
+text = "Effects"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="options_shadow_enabled" type="CheckBox" parent="tabs/Options"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 20.0
+margin/top = 60.0
+margin/right = 220.0
+margin/bottom = 83.0
+toggle_mode = true
+enabled_focus_mode = 2
+shortcut = null
+text = "Shadows Enabled"
+flat = false
+align = 2
+
+[node name="options_bloom_enabled" type="CheckBox" parent="tabs/Options"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 20.0
+margin/top = 100.0
+margin/right = 220.0
+margin/bottom = 123.0
+toggle_mode = true
+enabled_focus_mode = 2
+shortcut = null
+text = "Bloom Enabled"
+flat = false
+align = 2
+
+[node name="options_hdr_enabled" type="CheckBox" parent="tabs/Options"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 20.0
+margin/top = 140.0
+margin/right = 220.0
+margin/bottom = 163.0
+toggle_mode = true
+enabled_focus_mode = 2
+shortcut = null
+text = "HDR Enabled"
+flat = false
+align = 2
+
+[node name="apply_effects" type="Button" parent="tabs/Options"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 20.0
+margin/top = 460.0
+margin/right = 220.0
+margin/bottom = 480.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Apply Effects"
+flat = false
+
+[node name="vsep1" type="VSeparator" parent="tabs/Options"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 240.0
+margin/top = 20.0
+margin/right = 260.0
+margin/bottom = 480.0
+
+[node name="label_audio" type="Label" parent="tabs/Options"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 280.0
+margin/top = 20.0
+margin/right = 500.0
+margin/bottom = 40.0
+text = "Audio"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="label_volume_sfx" type="Label" parent="tabs/Options"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 400.0
+margin/top = 60.0
+margin/right = 500.0
+margin/bottom = 80.0
+text = "Effects Volume"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="label_volume_music" type="Label" parent="tabs/Options"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 400.0
+margin/top = 100.0
+margin/right = 500.0
+margin/bottom = 120.0
+text = "Music Volume"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="options_volume_sfx" type="HSlider" parent="tabs/Options"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 280.0
+margin/top = 60.0
+margin/right = 400.0
+margin/bottom = 80.0
+range/min = 0.0
+range/max = 10.0
+range/step = 1.0
+range/page = 0.0
+range/value = 4.0
+range/exp_edit = false
+range/rounded = true
+tick_count = 11
+ticks_on_borders = true
+focus_mode = 2
+
+[node name="options_volume_music" type="HSlider" parent="tabs/Options"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 280.0
+margin/top = 100.0
+margin/right = 400.0
+margin/bottom = 120.0
+range/min = 0.0
+range/max = 10.0
+range/step = 1.0
+range/page = 0.0
+range/value = 7.0
+range/exp_edit = false
+range/rounded = true
+tick_count = 11
+ticks_on_borders = true
+focus_mode = 2
+
+[node name="vsep2" type="VSeparator" parent="tabs/Options"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 520.0
+margin/top = 20.0
+margin/right = 540.0
+margin/bottom = 480.0
+
+[node name="label_user" type="Label" parent="tabs/Options"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 560.0
+margin/top = 20.0
+margin/right = 920.0
+margin/bottom = 40.0
+text = "User"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="options_nickname" type="LineEdit" parent="tabs/Options"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 560.0
+margin/top = 60.0
+margin/right = 920.0
+margin/bottom = 84.0
+placeholder/text = "Nickname"
+placeholder/alpha = 0.6
+focus_mode = 2
+caret/caret_blink = true
+caret/caret_blink_speed = 0.65
+
+[node name="Multiplayer" type="Tabs" parent="tabs"]
+
+visibility/visible = false
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 4.0
+margin/top = 32.0
+margin/right = 4.0
+margin/bottom = 4.0
+
+[node name="label_join" type="Label" parent="tabs/Multiplayer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 20.0
+margin/top = 20.0
+margin/right = 440.0
+margin/bottom = 40.0
+text = "Join Game"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="net_ip" type="LineEdit" parent="tabs/Multiplayer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 20.0
+margin/top = 60.0
+margin/right = 320.0
+margin/bottom = 84.0
+text = "127.0.0.1"
+placeholder/text = "IP Address"
+placeholder/alpha = 0.6
+focus_mode = 2
+caret/caret_blink = true
+caret/caret_blink_speed = 0.65
+
+[node name="net_port" type="SpinBox" parent="tabs/Multiplayer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 340.0
+margin/top = 60.0
+margin/right = 440.0
+margin/bottom = 84.0
+range/min = 0.0
+range/max = 100000.0
+range/step = 1.0
+range/page = 0.0
+range/value = 17000.0
+range/exp_edit = false
+range/rounded = false
+editable = true
+prefix = ""
+suffix = ""
+
+[node name="button_join" type="Button" parent="tabs/Multiplayer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 20.0
+margin/top = 440.0
+margin/right = 440.0
+margin/bottom = 480.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Join Game"
+flat = false
+
+[node name="button_disconnect" type="Button" parent="tabs/Multiplayer"]
+
+visibility/visible = false
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 20.0
+margin/top = 440.0
+margin/right = 440.0
+margin/bottom = 480.0
+disabled = true
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Disconnect"
+flat = false
+
+[node name="seperator" type="VSeparator" parent="tabs/Multiplayer"]
+
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 460.0
+margin/top = 20.0
+margin/right = 460.0
+margin/bottom = 20.0
+
+[node name="label_create" type="Label" parent="tabs/Multiplayer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 500.0
+margin/top = 20.0
+margin/right = 920.0
+margin/bottom = 40.0
+text = "Create Game"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="label_maxplayers" type="Label" parent="tabs/Multiplayer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 820.0
+margin/top = 280.0
+margin/right = 920.0
+margin/bottom = 300.0
+text = "Maxplayers"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="create_maxplayers" type="SpinBox" parent="tabs/Multiplayer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 720.0
+margin/top = 280.0
+margin/right = 800.0
+margin/bottom = 304.0
+range/min = 1.0
+range/max = 64.0
+range/step = 1.0
+range/page = 0.0
+range/value = 4.0
+range/exp_edit = false
+range/rounded = false
+editable = true
+prefix = ""
+suffix = ""
+
+[node name="maplist" type="Tree" parent="tabs/Multiplayer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 500.0
+margin/top = 60.0
+margin/right = 700.0
+margin/bottom = 480.0
+script/script = ExtResource( 2 )
+
+[node name="mapicon" type="TextureFrame" parent="tabs/Multiplayer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 720.0
+margin/top = 60.0
+margin/right = 920.0
+margin/bottom = 260.0
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 0
+
+[node name="button_create" type="Button" parent="tabs/Multiplayer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 720.0
+margin/top = 440.0
+margin/right = 920.0
+margin/bottom = 480.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Start Game"
+flat = false
+
+[node name="Credits" type="Tabs" parent="tabs"]
+
+visibility/visible = false
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 4.0
+margin/top = 32.0
+margin/right = 4.0
+margin/bottom = 4.0
+
+[node name="text" type="Tree" parent="tabs/Credits"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 20.0
+margin/top = 20.0
+margin/right = 920.0
+margin/bottom = 480.0
+script/script = ExtResource( 4 )
+
+[node name="button_quit" type="Button" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 420.0
+margin/top = 580.0
+margin/right = 600.0
+margin/bottom = 600.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Quit"
+flat = false
+
+

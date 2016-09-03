@@ -1,0 +1,312 @@
+[gd_scene load_steps=20 format=1]
+
+[ext_resource path="res://scripts/world.gd" type="Script" id=1]
+[ext_resource path="res://models/props/tower.scn" type="PackedScene" id=2]
+[ext_resource path="res://models/props/awning.scn" type="PackedScene" id=3]
+[ext_resource path="res://models/props/barrel.scn" type="PackedScene" id=4]
+[ext_resource path="res://models/props/crate.scn" type="PackedScene" id=5]
+[ext_resource path="res://models/props/lamppost.scn" type="PackedScene" id=6]
+[ext_resource path="res://models/props/tree1.scn" type="PackedScene" id=7]
+[ext_resource path="res://models/props/tree2.scn" type="PackedScene" id=8]
+[ext_resource path="res://models/props/tree3.scn" type="PackedScene" id=9]
+[ext_resource path="res://models/props/tree4.scn" type="PackedScene" id=10]
+[ext_resource path="res://models/props/tree5.scn" type="PackedScene" id=11]
+[ext_resource path="res://models/props/shrub1.scn" type="PackedScene" id=12]
+[ext_resource path="res://models/props/shrub2.scn" type="PackedScene" id=13]
+[ext_resource path="res://models/props/shrub3.scn" type="PackedScene" id=14]
+[ext_resource path="res://models/props/log1.scn" type="PackedScene" id=15]
+[ext_resource path="res://models/props/log2.scn" type="PackedScene" id=16]
+
+[sub_resource type="Environment" id=1]
+
+ambient_light/enabled = true
+ambient_light/color = Color( 1, 1, 1, 1 )
+ambient_light/energy = 0.4
+fxaa/enabled = false
+background/mode = 2
+background/color = Color( 0.455765, 0.759109, 0.980469, 1 )
+background/energy = 1.0
+background/scale = 1.0
+background/glow = 0.0
+background/canvas_max_layer = null
+glow/enabled = true
+glow/blur_passes = 1
+glow/blur_scale = 1.0
+glow/blur_strength = 1.0
+glow/blur_blend_mode = 0
+glow/bloom = 0.2
+glow/bloom_treshold = 0.5
+dof_blur/enabled = false
+dof_blur/blur_passes = 1
+dof_blur/begin = 100.0
+dof_blur/range = 10.0
+hdr/enabled = true
+hdr/tonemapper = 0.0
+hdr/exposure = 0.5
+hdr/white = 1.0
+hdr/glow_treshold = 0.95
+hdr/glow_scale = 0.4
+hdr/min_luminance = 0.4
+hdr/max_luminance = 8.0
+hdr/exposure_adj_speed = 1.0
+fog/enabled = false
+fog/begin = 30.0
+fog/begin_color = Color( 0, 0, 0, 1 )
+fog/end_color = Color( 0, 0, 0, 1 )
+fog/attenuation = -2.07053
+fog/bg = false
+bcs/enabled = false
+bcs/brightness = 1.0
+bcs/contrast = 1.0
+bcs/saturation = 1.0
+srgb/enabled = false
+
+[sub_resource type="FixedMaterial" id=2]
+
+flags/visible = true
+flags/double_sided = false
+flags/invert_faces = false
+flags/unshaded = false
+flags/on_top = false
+flags/lightmap_on_uv2 = true
+flags/colarray_is_srgb = true
+params/blend_mode = 0
+params/depth_draw = 1
+params/line_width = 0.0
+fixed_flags/use_alpha = false
+fixed_flags/use_color_array = false
+fixed_flags/use_point_size = false
+fixed_flags/discard_alpha = false
+fixed_flags/use_xy_normalmap = false
+params/diffuse = Color( 0.580125, 0.773438, 0.419952, 1 )
+params/specular = Color( 0, 0, 0, 1 )
+params/emission = Color( 0, 0, 0, 1 )
+params/specular_exp = 40
+params/detail_mix = 1.0
+params/normal_depth = 1
+params/shader = 0
+params/shader_param = 0.5
+params/glow = 0
+params/point_size = 1.0
+uv_xform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+textures/diffuse_tc = 0
+textures/detail_tc = 0
+textures/specular_tc = 0
+textures/emission_tc = 0
+textures/specular_exp_tc = 0
+textures/glow_tc = 0
+textures/normal_tc = 0
+textures/shade_param_tc = 0
+
+[sub_resource type="BoxShape" id=3]
+
+extents = Vector3( 25, 1, 25 )
+
+[node name="env" type="WorldEnvironment"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+environment = SubResource( 1 )
+script/script = ExtResource( 1 )
+
+[node name="spawnpoints" type="Spatial" parent="."]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="Spatial" type="Spatial" parent="spawnpoints"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 18.1, 1 )
+
+[node name="Spatial1" type="Spatial" parent="spawnpoints"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 20.1, -8 )
+
+[node name="Spatial2" type="Spatial" parent="spawnpoints"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0.1, 11 )
+
+[node name="players" type="Spatial" parent="."]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="sun" type="DirectionalLight" parent="."]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 0.866025, 0.453154, -0.211309, -0.12941, 0.611361, 0.780699, 0.482963, -0.64876, 0.588097, 0, 0, 0 )
+layers = 1
+params/enabled = true
+params/editor_only = false
+params/bake_mode = 0
+params/energy = 1.0
+colors/diffuse = Color( 1, 1, 1, 1 )
+colors/specular = Color( 1, 1, 1, 1 )
+shadow/shadow = true
+shadow/darkening = 0.0
+shadow/z_offset = 0.2
+shadow/z_slope_scale = 0.0
+shadow/esm_multiplier = 60.0
+shadow/blur_passes = 1.0
+projector = null
+operator = 0
+shadow/mode = 3
+shadow/max_distance = 100.0
+shadow/split_weight = 0.5
+shadow/zoffset_scale = 2.0
+
+[node name="ground" type="Quad" parent="."]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+layers = 1
+geometry/visible = true
+geometry/material_override = SubResource( 2 )
+geometry/cast_shadow = 1
+geometry/receive_shadows = true
+geometry/range_begin = 0.0
+geometry/range_end = 0.0
+geometry/extra_cull_margin = 0.0
+geometry/billboard = false
+geometry/billboard_y = false
+geometry/depth_scale = false
+geometry/visible_in_all_rooms = false
+geometry/use_baked_light = false
+geometry/baked_light_tex_id = 0
+quad/axis = 1
+quad/size = Vector2( 50, 50 )
+quad/offset = Vector2( 0, 0 )
+quad/centered = true
+
+[node name="col" type="StaticBody" parent="ground"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+input/ray_pickable = true
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 3 )
+shapes/0/transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="ground/col"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
+shape = SubResource( 3 )
+trigger = false
+_update_shape_index = 0
+
+[node name="props" type="Spatial" parent="."]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="prop_tower" parent="props" instance=ExtResource( 2 )]
+
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 0, 0 )
+
+[node name="prop_tower1" parent="props" instance=ExtResource( 2 )]
+
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 0, -13 )
+
+[node name="prop_awning" parent="props" instance=ExtResource( 3 )]
+
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 5, 0 )
+
+[node name="prop_barrel" parent="props" instance=ExtResource( 4 )]
+
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5, 0.6, -0.5 )
+
+[node name="prop_barrel1" parent="props" instance=ExtResource( 4 )]
+
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.5, 0.6, 0.5 )
+
+[node name="prop_barrel2" parent="props" instance=ExtResource( 4 )]
+
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0.6, 1.5 )
+
+[node name="prop_crate" parent="props" instance=ExtResource( 5 )]
+
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0.6, -3.5 )
+
+[node name="prop_crate1" parent="props" instance=ExtResource( 5 )]
+
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.5, 0.6, -2.5 )
+
+[node name="prop_crate2" parent="props" instance=ExtResource( 5 )]
+
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0.6, -7 )
+
+[node name="prop_lamppost" parent="props" instance=ExtResource( 6 )]
+
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -11 )
+
+[node name="prop_lamppost1" parent="props" instance=ExtResource( 6 )]
+
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -4 )
+
+[node name="prop_lamppost2" parent="props" instance=ExtResource( 6 )]
+
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 3 )
+
+[node name="prop_tree1_1" parent="props" instance=ExtResource( 7 )]
+
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -16 )
+
+[node name="prop_tree2_1" parent="props" instance=ExtResource( 8 )]
+
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -21 )
+
+[node name="prop_tree3_1" parent="props" instance=ExtResource( 9 )]
+
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, -18 )
+
+[node name="prop_tree4_1" parent="props" instance=ExtResource( 10 )]
+
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -40 )
+
+[node name="prop_tree5_1" parent="props" instance=ExtResource( 11 )]
+
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, -3 )
+
+[node name="prop_shrub1_1" parent="props" instance=ExtResource( 12 )]
+
+transform/local = Transform( 0.766044, 0, -0.642788, 0, 1, 0, 0.642788, 0, 0.766044, 8.7, 0, -15.8 )
+
+[node name="prop_shrub1_2" parent="props" instance=ExtResource( 12 )]
+
+transform/local = Transform( -0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107, 6.9, 0, -14.4 )
+
+[node name="prop_shrub1_3" parent="props" instance=ExtResource( 12 )]
+
+transform/local = Transform( 0.173648, 0, 0.984808, 0, 1, 0, -0.984808, 0, 0.173648, 6, 0, -16.3 )
+
+[node name="prop_shrub2_1" parent="props" instance=ExtResource( 13 )]
+
+transform/local = Transform( 0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, 3.4, 0, -19.4 )
+
+[node name="prop_shrub2_2" parent="props" instance=ExtResource( 13 )]
+
+transform/local = Transform( 0.573576, 0, -0.819152, 0, 1, 0, 0.819152, 0, 0.573576, 16.2, 0, -19.7 )
+
+[node name="prop_shrub3_1" parent="props" instance=ExtResource( 14 )]
+
+transform/local = Transform( 0.573576, 0, -0.819152, 0, 1, 0, 0.819152, 0, 0.573576, 9, 0, -20.9 )
+
+[node name="prop_shrub3_2" parent="props" instance=ExtResource( 14 )]
+
+transform/local = Transform( -0.573576, 0, -0.819152, 0, 1, 0, 0.819152, 0, -0.573576, 19.1, 0, -21.9 )
+
+[node name="prop_log1_1" parent="props" instance=ExtResource( 15 )]
+
+transform/local = Transform( 0.642788, 0, -0.766044, 0, 1, 0, 0.766044, 0, 0.642788, 10.5, 0, -20.4 )
+
+[node name="prop_log2_1" parent="props" instance=ExtResource( 16 )]
+
+transform/local = Transform( 0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, 19.8, 0, -13.7 )
+
+
