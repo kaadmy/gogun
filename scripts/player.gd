@@ -117,6 +117,9 @@ func set_animation(anim, speed = 1.0, force = false):
 		player_shadow_anim.set_speed(speed)
 
 func local_input():
+	if !is_network_master():
+		return
+
 	if gamestate.cl_chatting:
 		local_keys[0] = false
 		local_keys[1] = false
