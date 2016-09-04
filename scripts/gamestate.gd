@@ -150,7 +150,7 @@ func player_connected(id):
 		rpc_id(id, "create_world")
 
 func player_disconnected(id):
-	rpc("despawn_player")
+	rpc("despawn_player", id)
 
 	print("Player #", id, "disconnected")
 
